@@ -64,12 +64,23 @@ alias gs-="git switch -"
 alias gmm="git merge main"
 
 gcom() {
-  echo '👉🏻 STATUS 👉🏻 ADD ALL 👉🏻 STATUS 👉🏻 COMMIT -M'
+  echo '👉🏻 STATUS 👉🏻 ADD ALL 👉🏻 STATUS 👉🏻 COMMIT -M 👉🏻 PUSH'
   git status
   git add .
   git status
   git commit -m "$@"
+  git push
 }
+
+gchore() {
+  echo '👉🏻 STATUS 👉🏻 ADD ALL 👉🏻 STATUS 👉🏻 COMMIT -M CHORE 👉🏻 PUSH'
+  git status
+  git add .
+  git status
+  git commit -m "chore: $*."
+  git push
+}
+
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
