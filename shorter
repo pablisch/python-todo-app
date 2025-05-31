@@ -1,0 +1,90 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# MISCELLANEOUS ALIASES
+# reload aliases in current terminal
+alias upali="source ~/.zshrc"
+alias ali="vim ~/.zshrc"
+alias vest="vitest --globals --reporter verbose --run"
+alias jw="jest --watchAll --verbose "
+alias pretty="npm run pretty"
+alias format="npm run format"
+# SQL
+alias sql-h="psql -h 127.0.0.1"
+
+# DIRECTORY SHORTCUTS
+alias pro="cd /Users/pablojoyce/Documents/Repos/projects/"
+alias qe="cd /Users/pablojoyce/Documents/Repos/makers-QE/"
+alias nat="cd /Users/pablojoyce/Documents/Repos/native/"
+alias course="cd /Users/pablojoyce/Documents/Repos/course-repos/"
+alias port="cd /Users/pablojoyce/Documents/Repos/projects/portfolio-ts"
+alias repo="cd /Users/pablojoyce/Documents/Repos/"
+alias prac="cd /Users/pablojoyce/Documents/Repos/practice/"
+alias pyth="cd /Users/pablojoyce/Documents/Repos/python/"
+alias util="cd /Users/pablojoyce/Documents/Repos/utils/"
+
+# GIT ALIASES
+alias gs="git status"
+alias gsw="git switch "
+alias gswc="git switch -c "
+alias gcm="git commit -m "
+alias gadd="git add ."
+alias rebase="git config pull.rebase false"
+alias gsm="git switch main"
+alias gs-="git switch -"
+alias gmm="git merge main"
+
+gcom() {
+  echo '👉🏻 STATUS 👉🏻 ADD ALL 👉🏻 STATUS 👉🏻 COMMIT -M'
+  git status
+  git add .
+  git status
+  git commit -m "$@"
+}
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH=$PATH:/Users/pablojoyce/Library/Python/3.11/bin
+
+export PATH="/usr/local/opt/gradle@7/bin:$PATH"
+
+export ANDROID_HOME=/Users/pablojoyce/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
